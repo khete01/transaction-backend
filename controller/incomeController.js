@@ -24,7 +24,7 @@ const deleteTransaction = async (req, res) => {
   try {
     const result = await transactionModel.findByIdAndDelete(transactionId);
     console.log(result);
-    res.status(200).send("Deleted!");
+    res.status(200).send(result);
   } catch (err) {
     console.log(err);
     res.status(500).send("Internal error");
