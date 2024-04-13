@@ -8,7 +8,7 @@ const {
 
 const transactionRoute = Router();
 
-transactionRoute.get("/get-income", getIncome);
+transactionRoute.get("/get-income/:userId", getIncome);
 transactionRoute.post("/create-transaction", createIncome);
 transactionRoute.delete("/delete/:id", deleteTransaction);
 transactionRoute.put("/edit/:id", editTransaction);
