@@ -21,6 +21,7 @@ const loginUser = async (req, res) => {
   const id = user.id;
   if (user) {
     res.status(200).send(id);
+    console.log(id);
   } else {
     res.status(404).send("user not found");
   }

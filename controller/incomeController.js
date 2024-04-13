@@ -14,8 +14,8 @@ const createIncome = async (req, res) => {
 const getIncome = async (req, res) => {
   const userId = req.params.userId;
   try {
-    const allTransactions = await transactionModel.find({ userId });
-    res.status(200).json(allTransactions);
+    const transactions = await transactionModel.find({ userId });
+    res.status(200).json(transactions);
   } catch (err) {
     res.status(500).send(err);
   }
