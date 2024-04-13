@@ -19,15 +19,14 @@ const loginUser = async (req, res) => {
   console.log(body);
   const user = await UserModel.findOne({ email: body.email });
   const id = user.id;
-  // console.log(id);
   if (user) {
-    // res.status(200).send(user);
-    res.status(200).send(id);
+    res.status(200).send(user);
+    console.log(user);
   } else {
     res.status(404).send("user not found");
   }
 };
 module.exports = {
   createUser,
-  loginUser
+  loginUser,
 };
